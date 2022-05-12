@@ -52,8 +52,7 @@ namespace BethPieApplication
             //El necesita mapear una solicitud entrante con el código correcto que se ejecutará
             app.UseRouting();
 
-            app.UseEndpoints(endpoints =>
-            {
+
             //Como no queremos responder a todas las solicitudes con "Hola MUndo", reemplazamos el siguiente código
 
             // endpoints.MapGet("/", async context =>
@@ -61,9 +60,11 @@ namespace BethPieApplication
             //    await context.Response.WriteAsync("Hello World!");
             //});
             // con
-            endpoints.MapControllerRoute(
-                name: default,
-                pattern: "{controller=Homme} / {action=Index} / {id?}");
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                name: "default",
+                pattern:"{controller=Home}/{action=Index}/{id?}");
                
             });
         }
