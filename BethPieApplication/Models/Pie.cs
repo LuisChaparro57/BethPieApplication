@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BethPieApplication.Models
-{   
-    // Agregamos la clase Pie y sus atributos
+namespace BethanysPieShop.Models
+{
     public class Pie
     {
         public int PieId { get; set; }
@@ -15,11 +14,10 @@ namespace BethPieApplication.Models
         public string AllergyInformation { get; set; }
         public decimal Price { get; set; }
         public string ImageUrl { get; set; }
-        public string ImageThumnailUrl { get; set; }
+        public string ImageThumbnailUrl { get; set; }
         public bool IsPieOfTheWeek { get; set; }
         public bool InStock { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
-
     }
 }
